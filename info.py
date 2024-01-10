@@ -31,7 +31,7 @@ SPELL_IMG = environ.get("SPELL_IMG", "https://graph.org/file/084bb003de163373b88
 MELCOW_VID = environ.get("MELCOW_VID", "https://graph.org/file/5b925763e05d1bf973a0a.jpg")
 
 # Admins, Channels & Users
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '5636224141 5726592912 1147676731 1284476297 1269341939').split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '5636224141').split()]
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '').split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '1061576483 5963138883').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
